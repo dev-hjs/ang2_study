@@ -1,2 +1,12 @@
 {
+  "window.zoomLevel": 1,
+  "editor.fontFmily" : "D2Coding",
+  "git.autofetch": true,
+  "files.exclude": {
+  "**/.git": true,
+  "**/.svn": true,
+  "**/.hg": true,
+  "**/CVS": true,
+  "**/.DS_Store": true
+  }
 }
