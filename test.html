@@ -1,0 +1,50 @@
+이던 그냥 텍스트 파일립니다.
+확장자만 html이예요
+
+<script src="./test.js"></script>
+<script src="./person.js"></script>
+
+<input type="text" name="cnt" id="cnt" >
+<input type="button" id="cntBtn" value="생성" onclick="makeTable()">
+<div id="result_div"></div>
+<script>
+    //var t = new Test2();
+    //t.test = "바뀌나?"
+    //alert(t.test);
+
+    var p = new Person("박경훈",40, "남자","서울");
+    p.writePersonInfo();
+    p.setName("테스트");
+    p.writePersonInfo();
+    p.play = function(){
+        alert("놀고있네요");
+    }
+    p.play();
+    function makeTable(){
+        var cntObj = document.getElementById("cnt");
+        var count = new Number(cntObj.value);
+        var str = "<table border='1'>";
+        var rDivObj = document.getElementById("result_div");
+        for(var i=1;i<=count;i++){
+            str += "<tr>";
+            for(var j=1;j<=count;j++){
+                str +="<td>" + ((  (i-1) *2)+j) + "</td>";
+            }
+            str += i + "</tr>";
+        }
+        str += "</table>"
+        rDivObj.innerHTML = str;
+        //document.getElementById("result_div").innerHTML = str;
+    }
+/*
+    var a = 3;
+    {
+        var a = 4;
+    }
+    alert(a);
+    /*
+    p.name = "이름이 바뀌나?";
+    p.alertName();
+    //var t = new Test();
+    //t.alertStr("a", "b");
+</script>
